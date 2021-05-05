@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import SearchBar from '../SearchBar/SearchBar'
 import { searchTitles } from '../../api-calls'
+import SearchResults from '../SearchResults/SearchResults'
 
 export default class App extends Component {
   constructor() {
@@ -23,6 +24,7 @@ export default class App extends Component {
       <main className='app'>
         <h1>The Shoppies</h1>
         <SearchBar searchMovies={this.searchMovies} />
+        <SearchResults searchResults={this.state.searchResults} />
       </main>
     )
   }
