@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar'
 import { searchTitles } from '../../api-calls'
 import SearchResults from '../SearchResults/SearchResults'
 import Nominations from '../Nominations/Nominations'
+import CompletionBanner from '../CompletionBanner/CompletionBanner'
 
 export default class App extends Component {
   constructor() {
@@ -35,7 +36,7 @@ export default class App extends Component {
     return (
       <main className='app'>
         <h1 className='site-header'>The Shoppies</h1>
-        {this.state.nominations.length === 5 && <h1>You have selected your five movies!</h1>}
+        {this.state.nominations.length === 5 && <CompletionBanner />}
         <SearchBar searchMovies={this.searchMovies} />
         <div className='list-container'>
           <SearchResults 

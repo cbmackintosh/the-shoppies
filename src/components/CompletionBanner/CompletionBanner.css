@@ -1,0 +1,10 @@
+.completion-banner {
+  width: 84%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  background-color: rgb(255, 223, 223);
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
