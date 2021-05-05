@@ -1,3 +1,4 @@
+import './Nominations.scss'
 
 const Nominations = ({ nominations, removeNomination }) => {
   
@@ -13,7 +14,8 @@ const Nominations = ({ nominations, removeNomination }) => {
     })
     
     return (
-      <div>
+      <div className="nominations-container">
+        <h3>Nominations:</h3>
         <ul>
           {nominationsList}
         </ul>
@@ -21,7 +23,9 @@ const Nominations = ({ nominations, removeNomination }) => {
     )
   } else {
     return (
-      <h1>null</h1>
+      <div className="nominations-container">
+        <h3>You haven't nominated any movies.</h3>
+      </div>
     )
   }
 

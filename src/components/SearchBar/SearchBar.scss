@@ -1,0 +1,18 @@
+@import '../reusable-styles';
+
+.search-bar-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include container-properties;
+}
+
+.search-bar {
+  width: 100%;
+  height: 30px;
+}
+
+.search-bar-header {
+  margin-bottom: 0;
+}

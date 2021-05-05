@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SearchBar.scss'
 
 export default class SearchBar extends Component {
   constructor() {
@@ -16,9 +17,9 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Movie title</h2>
-        <input onChange={e => this.runSearch(e)}></input>
+      <div className='search-bar-container'>
+        <h3 className='search-bar-header'>Movie title</h3>
+        <input className='search-bar' onChange={e => this.runSearch(e)}></input>
       </div>
     )
   }

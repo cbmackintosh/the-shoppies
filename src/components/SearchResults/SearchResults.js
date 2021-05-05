@@ -1,5 +1,7 @@
 
-const SearchResults = ({ searchResults, nominations, addNomination }) => {
+import './SearchResults.scss'
+
+const SearchResults = ({ searchResults, nominations, addNomination, query }) => {
   
   if(searchResults.Response === "True") {
     const resultsList = searchResults.Search.map(result => {
@@ -13,7 +15,8 @@ const SearchResults = ({ searchResults, nominations, addNomination }) => {
     })
     
     return (
-      <div>
+      <div className='search-results-container'>
+        <h3>Showing results for "{query}"</h3>
         <ul>
           {resultsList}
         </ul>
@@ -21,9 +24,12 @@ const SearchResults = ({ searchResults, nominations, addNomination }) => {
     )
   } else {
     return (
-      <h1>null</h1>
+      <div className='search-results-container'>
+        <h3>Showing results for "{query}"</h3>
+        <p>{searchResults.Error}</p>
+      </div>
     )
-  }
+  } 
 
 }
 

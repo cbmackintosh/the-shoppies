@@ -11,12 +11,13 @@ export default class App extends Component {
     this.state = {
       searchResults: [],
       nominations: [],
+      searchQuery: ''
     }
   }
 
   searchMovies = (query) => {
     searchTitles(query)
-    .then(data => this.setState({ searchResults: data }))
+    .then(data => this.setState({ searchResults: data, searchQuery: query }))
   }
 
   addNomination = (movie) => {
@@ -33,11 +34,21 @@ export default class App extends Component {
     console.log(this.state)
     return (
       <main className='app'>
-        <h1>The Shoppies</h1>
+        <h1 className='site-header'>The Shoppies</h1>
         {this.state.nominations.length === 5 && <h1>You have selected your five movies!</h1>}
         <SearchBar searchMovies={this.searchMovies} />
-        <SearchResults searchResults={this.state.searchResults} nominations={this.state.nominations} addNomination={this.addNomination} />
-        <Nominations nominations={this.state.nominations} removeNomination={this.removeNomination} />
+        <div className='list-container'>
+          <SearchResults 
+            searchResults={this.state.searchResults} 
+            nominations={this.state.nominations} 
+            addNomination={this.addNomination} 
+            query={this.state.searchQuery} 
+          />
+          <Nominations 
+            nominations={this.state.nominations} 
+            removeNomination={this.removeNomination} 
+          />
+        </div>     
       </main>
     )
   }
