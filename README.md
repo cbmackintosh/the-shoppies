@@ -1,4 +1,6 @@
 
 # The Shoppies
 
-By Cameron Mackintosh
+Deployed site: https://theshoppies-cmackintosh.herokuapp.com/
+
+
