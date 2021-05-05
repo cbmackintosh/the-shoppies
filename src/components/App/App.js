@@ -34,6 +34,7 @@ export default class App extends Component {
     return (
       <main className='app'>
         <h1>The Shoppies</h1>
+        {this.state.nominations.length === 5 && <h1>You have selected your five movies!</h1>}
         <SearchBar searchMovies={this.searchMovies} />
         <SearchResults searchResults={this.state.searchResults} nominations={this.state.nominations} addNomination={this.addNomination} />
         <Nominations nominations={this.state.nominations} removeNomination={this.removeNomination} />
