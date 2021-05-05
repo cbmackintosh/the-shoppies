@@ -1,14 +1,13 @@
 
-const SearchResults = ({ searchResults, addNomination }) => {
+const SearchResults = ({ searchResults, nominations, addNomination }) => {
   
   if(searchResults.Response === "True") {
-    console.log('check')
     const resultsList = searchResults.Search.map(result => {
       return (
         <li>
           {result.Title} 
           ({result.Year})
-          <button onClick={() => addNomination(result)}>Nominate</button>
+          {nominations.includes(result) ? <button disabled>Nominate</button> : <button onClick={() => addNomination(result)}>Nominate</button>}
         </li>
       )
     })

@@ -28,7 +28,7 @@ export default class App extends Component {
       <main className='app'>
         <h1>The Shoppies</h1>
         <SearchBar searchMovies={this.searchMovies} />
-        <SearchResults searchResults={this.state.searchResults} addNomination={this.addNomination} />
+        <SearchResults searchResults={this.state.searchResults} nominations={this.state.nominations} addNomination={this.addNomination} />
       </main>
     )
   }
