@@ -1,5 +1,5 @@
 
-const Nominations = ({ nominations }) => {
+const Nominations = ({ nominations, removeNomination }) => {
   
   if(nominations.length) {
     const nominationsList = nominations.map(nomination => {
@@ -7,6 +7,7 @@ const Nominations = ({ nominations }) => {
         <li>
           {nomination.Title} 
           ({nomination.Year})
+          <button onClick={() => removeNomination(nomination)}>Remove</button>
         </li>
       )
     })

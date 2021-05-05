@@ -23,6 +23,12 @@ export default class App extends Component {
     this.setState({ nominations: [...this.state.nominations, movie] })
   }
 
+  removeNomination = (movie) => {
+    const arr = this.state.nominations
+    arr.splice(arr.indexOf(movie), 1)
+    this.setState({ nominations: arr})
+  }
+
   render() {
     console.log(this.state)
     return (
@@ -30,7 +36,7 @@ export default class App extends Component {
         <h1>The Shoppies</h1>
         <SearchBar searchMovies={this.searchMovies} />
         <SearchResults searchResults={this.state.searchResults} nominations={this.state.nominations} addNomination={this.addNomination} />
-        <Nominations nominations={this.state.nominations} />
+        <Nominations nominations={this.state.nominations} removeNomination={this.removeNomination} />
       </main>
     )
   }
