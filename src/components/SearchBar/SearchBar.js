@@ -12,8 +12,9 @@ export default class SearchBar extends Component {
     return (
       <div>
         <h2>Movie title</h2>
-        <input></input>
+        <input onChange={e => this.searchMovies(e)}></input>
       </div>
     )
   }
+
 }
