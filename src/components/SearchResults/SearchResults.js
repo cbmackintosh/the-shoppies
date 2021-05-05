@@ -6,7 +6,7 @@ const SearchResults = ({ searchResults, nominations, addNomination, query }) => 
   if(searchResults.Response === "True") {
     const resultsList = searchResults.Search.map(result => {
       return (
-        <li>
+        <li key={result.imdbID}>
           {result.Title} 
           ({result.Year})
           {nominations.includes(result) ? <button disabled>Nominate</button> : <button onClick={() => addNomination(result)}>Nominate</button>}

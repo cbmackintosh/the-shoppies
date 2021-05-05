@@ -5,7 +5,7 @@ const Nominations = ({ nominations, removeNomination }) => {
   if(nominations.length) {
     const nominationsList = nominations.map(nomination => {
       return (
-        <li>
+        <li key={nomination.imdbID}>
           {nomination.Title} 
           ({nomination.Year})
           <button onClick={() => removeNomination(nomination)}>Remove</button>
