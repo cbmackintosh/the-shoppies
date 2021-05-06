@@ -32,7 +32,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <main className='app'>
         <h1 className='site-header'>The Shoppies</h1>
