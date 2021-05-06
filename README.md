@@ -8,7 +8,9 @@ Deployed site: https://theshoppies-cmackintosh.herokuapp.com/
 
 ## Abstract:
 
-This application was built as part of my application to Shopify's Fall 2021 Frontend Developer Internship. 
+This project was submitted as part of my application to Shopify's Fall 2021 Frontend Developer Internship. It's a simple React application that consumes the <a href="http://omdbapi.com/">OMDb API</a>, allowing users to search from a database of movies by title. Users can chose to nominate a movie from the search results panel on the left side of the screen, which then adds that movie title to a list of nominations on the right side of the screen. Nominated movies can then be un-nominated using the 'Remove' button. Once the user has nominated five movies, a notification banner appears at the top of the screen.
+
+
 
 ## Technologies:
 
