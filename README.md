@@ -10,7 +10,13 @@ Deployed site: https://theshoppies-cmackintosh.herokuapp.com/
 
 This project was submitted as part of my application to Shopify's Fall 2021 Frontend Developer Internship. It's a simple React application that consumes the <a href="http://omdbapi.com/">OMDb API</a>, allowing users to search from a database of movies by title. Users can chose to nominate a movie from the search results panel on the left side of the screen, which then adds that movie title to a list of nominations on the right side of the screen. Nominated movies can then be un-nominated using the 'Remove' button. Once the user has nominated five movies, a notification banner appears at the top of the screen.
 
+![Screen Shot 2021-05-06 at 9 54 05 AM](https://user-images.githubusercontent.com/72054706/117328730-24ec9300-ae51-11eb-902b-b2fbe2061065.png)
 
+## Installation:
+
+* Clone this repository with `git clone git@github.com:cbmackintosh/the-shoppies.git`
+* Install npm from the root directory with `npm install`
+* Run `npm start` to launch the application in your browser
 
 ## Technologies:
 
